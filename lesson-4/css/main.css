@@ -20,14 +20,33 @@
 body {
   background-color: var(--primary-white-color);
   color: var(--primary-text-color);
+
+  font-family: Montserrat, sans-serif;
+  letter-spacing: -0.015em;
+  font-size: 18px;
+  line-height: 1.67;
 }
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Comfortaa;
+} */
 
 .list {
   list-style: none;
 }
 
+/* Logo */
 .logo {
   color: var(--title-text-color);
+  font-family: Comfortaa, cursive;
+  font-size: 28px;
+  line-height: 1.14;
+  /* identical to box height */
 }
 
 .logo:hover {
@@ -41,6 +60,9 @@ body {
 
 .site-nav .link {
   color: var(--accent-color);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.2;
 }
 
 .site-nav .link:hover,
@@ -54,34 +76,65 @@ body {
 
 /* hero */
 
-.hero .title {
+.hero-title {
   color: var(--title-text-color);
+
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 1.43;
+  text-align: center;
 }
 
 /* section */
 
 .section-title {
   color: var(--title-text-color);
+
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.5;
+  /* identical to box height, or 150% */
+
+  text-align: center;
+  letter-spacing: -0.015em;
 }
 
 /* Features */
 .feature-list .title {
   color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.5;
+  /* identical to box height, or 150% */
+}
+
+/* .feature-list .text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  or 167% */
 }
 
 /* examples */
 
 .work-list .title {
   color: var(---title-text-color);
+font-weight: 700;
+font-size: 24px;
+line-height: 1.5;
+/* identical to box height, or 150% */
 }
 
 .button {
   color: var(--title-text-color);
   background-color: var(--primary-white-color);
-  font-size: 24px;
-  padding: 12px 24px;
+  /* padding: 12px 24px;
   display: inline-block;
-  border: 1px solid black;
+  border: 1px solid black; */
+
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.2;
 }
 
 .button.primary {
