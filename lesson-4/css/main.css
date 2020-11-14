@@ -1,0 +1,97 @@
+/* цвет основного текста: #000000;
+в итоге это вторичный */
+
+/* вторичный цвет: 0,0,0,0,8;
+в итоге это первичный цвет -основной текст по нему. */
+
+/* белый #FFFFFF */
+
+/* акцент #18A0FB; */
+
+/* вторичный цвет фона #F5F5F5 */
+
+:root {
+  --primary-text-color: rgba(0, 0, 0, 0.8);
+  --title-text-color: #000000;
+  --accent-color: #18a0fb;
+  --primary-white-color: #ffffff;
+}
+
+body {
+  background-color: var(--primary-white-color);
+  color: var(--primary-text-color);
+}
+
+.list {
+  list-style: none;
+}
+
+.logo {
+  color: var(--title-text-color);
+}
+
+.logo:hover {
+  color: var(--accent-color);
+}
+
+/* site nav */
+/* .site-nav a {
+  color: #18a0fb;
+} */
+
+.site-nav .link {
+  color: var(--accent-color);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: black;
+}
+
+.site-nav .link.current {
+  color: var(--primary-text-color);
+}
+
+/* hero */
+
+.hero .title {
+  color: var(--title-text-color);
+}
+
+/* section */
+
+.section-title {
+  color: var(--title-text-color);
+}
+
+/* Features */
+.feature-list .title {
+  color: var(--title-text-color);
+}
+
+/* examples */
+
+.work-list .title {
+  color: var(---title-text-color);
+}
+
+.button {
+  color: var(--title-text-color);
+  background-color: var(--primary-white-color);
+  font-size: 24px;
+  padding: 12px 24px;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+.button.primary {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  border-color: transparent;
+}
+
+.button.secondary {
+  color: var(--accent-color);
+  background-color: var(--primary-white-color);
+  border-color: var(--accent-color);
+}
