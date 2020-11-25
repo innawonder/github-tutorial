@@ -1,0 +1,348 @@
+/* цвет основного текста: #000000;
+в итоге это вторичный */
+
+/* вторичный цвет: 0,0,0,0,8;
+в итоге это первичный цвет -основной текст по нему. */
+
+/* белый #FFFFFF */
+
+/* акцент #18A0FB; */
+
+/* вторичный цвет фона #F5F5F5 */
+
+:root {
+  --primary-text-color: rgba(0, 0, 0, 0.8);
+  --title-text-color: #000000;
+  --accent-color: #18a0fb;
+  --primary-white-color: #ffffff;
+  --secondary-bg-colour: #f5f5f5;
+}
+
+body {
+  background-color: var(--primary-white-color);
+  color: var(--primary-text-color);
+
+  font-family: Montserrat, sans-serif;
+  letter-spacing: -0.015em;
+  font-size: 18px;
+  line-height: 1.67;
+}
+
+.test-container {
+  width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: teal;
+}
+
+.flex-element {
+  width: calc((100% - 60px) / 3);
+  background-color: tomato;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+/* width: 380px; */
+/* margin-right: 30px; */
+/* (ниже аналог ИЛИ) */
+
+/* calc((100% - колв-о маржинов в строке*значение маржинов)/кол-во элементов в строке
+например calc (100%-49*30)/50 - для 50 эл-тов в строке */
+
+/* ИЛИ всем, кроме каждого 3-го, т.е.НЕ какждый 3-й
+.flex-element:not(:nth-child(3n)) {
+  margin-right: 30px;
+} */
+
+.flex-element:nth-child(3n) {
+  margin-right: 0;
+}
+
+/* ИЛИ всем, кроме последних ТРЁХ
+.flex-element:not(:nth-last-child(-n+3)) {
+  margin-bottom: 30px;
+} */
+
+.flex-element:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+/* утилиты */
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1440px;
+  outline: 2px solid tomato;
+}
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Comfortaa;
+} */
+
+/* Logo */
+.logo {
+  color: var(--title-text-color);
+  font-family: Comfortaa, cursive;
+  font-size: 28px;
+  line-height: 1.14;
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: var(--accent-color);
+}
+
+/* .page-header {
+  background-color: grey;} */
+
+/* Main-nav */
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+/* Auth nav */
+
+.auth-nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.auth-nav .item + .item {
+  margin-left: 12px;
+}
+
+/* Site-nav */
+
+.site-nav {
+  display: flex;
+  margin-left: 70px;
+}
+
+/* .site-nav .item {
+  background-color: tomato;
+  margin-right: 40px;
+} */
+
+.site-nav .item + .item {
+  margin-left: 40px;
+}
+
+/* .site-nav .item:last-child {
+  margin-right: 0px;
+} */
+
+/* .site-nav .item:not(:last-child) {
+  margin-right: 40px;
+} */
+
+.site-nav .link {
+  display: block;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: black;
+}
+
+.site-nav .link.current {
+  color: var(--primary-text-color);
+}
+
+/* hero */
+
+.hero {
+  text-align: center;
+}
+
+.hero-title {
+  color: var(--title-text-color);
+  margin-top: 0;
+  margin-bottom: 40;
+
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 1.43;
+}
+
+/* section */
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.section.no-padding {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.section-title {
+  margin-bottom: 60;
+  margin-top: 0;
+
+  color: var(--title-text-color);
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.5;
+  letter-spacing: -0.015em;
+}
+
+.section-title.centered,
+.section-description.centered {
+  text-align: center;
+}
+
+.section-description {
+  margin-top: 0px;
+  margin-bottom: 80px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.39;
+}
+
+/* Features и examples */
+
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -40px -75px;
+}
+
+.feature-list .item {
+  width: 625px;
+  margin: 40px 75px;
+  /* background-color: tomato; */
+}
+
+.feature-list .title,
+.work-list .title {
+  margin-top: 0;
+  margin-bottom: 24;
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.5;
+  /* identical to box height, or 150% */
+}
+.feature-list p {
+  margin-top: 0;
+  margin-bottom: 32;
+}
+
+.work-list > .item {
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #fff;
+}
+
+.work-list > .item:nth-child(2n) {
+  background-color: var(--secondary-bg-colour);
+  flex-direction: row-reverse;
+}
+
+.work-list > .item:nth-child(2n + 1) > .content {
+  margin-left: 84px;
+}
+
+.work-list > .item:nth-child(2n) > .content {
+  margin-right: 84px;
+}
+
+/* .feature-list .text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  or 167% */
+
+/* examples */
+
+/* .work-list .title {
+  color: var(---title-text-color);
+font-weight: 700;
+font-size: 24px;
+line-height: 1.5;
+/* identical to box height, or 150% */
+
+/* Клиенты */
+
+.client-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1030px;
+  margin: -32px -42px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.client-list li {
+  margin: 32px 42px;
+}
+
+/* регистрация */
+
+.section > .container.sign-up {
+  display: flex;
+  align-items: center;
+  width: 1456px;
+}
+
+.section-description.sign-up {
+  margin: 120px 84px 120px 80px;
+}
+
+.button {
+  display: inline-block;
+  min-width: 130px;
+  border-radius: 6px;
+  padding: 11px 34px;
+  color: var(--title-text-color);
+  background-color: var(--primary-white-color);
+
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.2;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid transparent;
+}
+
+.button.primary {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  text-decoration: none;
+}
+
+.button.secondary {
+  color: var(--accent-color);
+  background-color: var(--primary-white-color);
+  text-decoration: none;
+  border-color: var(--accent-color);
+}
